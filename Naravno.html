@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Narvano</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f5f5f5;
+    color:#111;
+    text-align:center;
+}
+
+header{
+    background:#000;
+    padding:30px;
+}
+
+header img{
+    width:180px;
+}
+
+.slogan{
+    color:#4CAF50;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+nav{
+    background:#111;
+    padding:15px;
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    color:white;
+    margin:0 20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#4CAF50;
+}
+
+section{
+    padding:90px 20px;
+    max-width:800px;
+    margin:auto;
+}
+
+.button{
+    background:#4CAF50;
+    color:white;
+    padding:14px 25px;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:20px;
+}
+
+footer{
+    background:#000;
+    color:white;
+    padding:25px;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.png">
+<div class="slogan">Just be natural. Brutal.</div>
+</header>
+
+<nav>
+<a href="Home.html">Home</a>
+<a href="ingredients.html">Ingredients</a>
+<a href="clothing.html">Clothing</a>
+<a href="products.html">Products</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section id="home">
+<h1>Natural Energy. Brutal Performance.</h1>
+<p>Organic • Vegan • Clean Formula</p>
+<a href="#product" class="button">View Product</a>
+</section>
+
+<section id="product">
+<h2>Product</h2>
+<p>
+Narvano is a plant-based pre-workout supplement designed to boost
+energy, focus and endurance naturally.
+</p>
+<p><b>30 Servings • Vegan • No Artificial Additives</b></p>
+</section>
+
+<section id="ingredients">
+<h2>Ingredients</h2>
+<p>Green Coffee Extract — Natural caffeine</p>
+<p>Beetroot Powder — Endurance support</p>
+<p>L-Citrulline — Blood flow</p>
+<p>Rhodiola Rosea — Focus</p>
+</section>
+
+<section id="clothing">
+<h2>Clothing Collection</h2>
+
+<img src="White shirt with logo right.png" width="300">
+
+<h3>Narvano Performance T-Shirt</h3>
+<p>Minimal design. Athletic fit. Breathable eco fabric.</p>
+
+<p><b>Price:</b> €24.99</p>
+
+<label><b>Select Size:</b></label><br><br>
+
+<select id="size">
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+</select>
+
+<br><br>
+
+<button onclick="goToCart()" class="button">Add to Cart</button>
+</section>
+
+<p id="total"></p>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<p><b>Amadej Zalokar</b></p>
+<p>17 years old</p>
+<p>Ekonomska šola Novo mesto — Media Technician</p>
+
+<p>
+This website was created as a school project where I designed my own
+supplement brand called Narvano including product idea, branding and packaging concept.
+</p>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: naravno@email.com</p>
+<p>Instagram: @narvano</p>
+</section>
+
+<footer>
+Narvano Project Website
+</footer>
+
+<script>
+function goToCart(){
+
+let size = document.getElementById("size").value;
+
+let url = "cart.html?product=Narvano%20T-Shirt&price=24.99&size=" + size;
+
+window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>

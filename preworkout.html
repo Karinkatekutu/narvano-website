@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Narvano Preworkout</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.product-page{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:60px;
+margin:80px auto;
+flex-wrap:wrap;
+max-width:1000px;
+}
+
+.product-left img{
+width:320px;
+}
+
+.product-right{
+text-align:left;
+max-width:400px;
+}
+
+.size-btn{
+padding:12px 20px;
+margin:5px;
+border:2px solid #4CAF50;
+background:white;
+cursor:pointer;
+font-weight:bold;
+}
+
+.size-btn:hover{
+background:#4CAF50;
+color:white;
+}
+
+.buy-btn{
+margin-top:20px;
+padding:15px 30px;
+background:#4CAF50;
+color:white;
+border:none;
+font-size:16px;
+cursor:pointer;
+}
+
+.desc{
+margin-top:80px;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>Narvano Pre-Workout</header>
+
+<nav>
+<a href="Home.html">Home</a>
+<a href="ingredients.html">Ingredients</a>
+<a href="clothing.html">Clothing</a>
+<a href="products.html">Products</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="product-page">
+
+<div class="product-left">
+<img src="Preworkout posoda.png" class="small-img float">
+</div>
+
+<div class="product-right">
+
+<h1>Eco Pre-Workout</h1>
+<h2>€29.99</h2>
+
+<p>Select Size:</p>
+
+<button class="size-btn" onclick="selectSize('150g')">150g</button>
+<button class="size-btn" onclick="selectSize('300g')">300g</button>
+<button class="size-btn" onclick="selectSize('500g')">500g</button>
+
+<br>
+
+<button class="buy-btn" onclick="buyProduct()">Buy Now</button>
+
+</div>
+
+</div>
+
+<div class="desc">
+<h2>Description</h2>
+
+<p>
+Narvano Eco Pre-Workout is a natural performance formula designed to boost
+energy, endurance and focus using clean plant-based ingredients.
+</p>
+
+<p>
+✔ Natural caffeine sources<br>
+✔ No artificial additives<br>
+✔ Vegan formula<br>
+✔ Sustainable ingredients
+</p>
+
+</div>
+
+<script>
+
+let selectedSize="150g";
+
+function selectSize(size){
+selectedSize=size;
+}
+
+function buyProduct(){
+window.location.href=
+"cart.html?product=Narvano Preworkout&price=29.99&size="+selectedSize;
+}
+
+</script>
+
+</body>
+</html>

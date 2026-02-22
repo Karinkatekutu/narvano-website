@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Clothing</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{margin:0;font-family:Arial;background:#f4f4f4;text-align:center;}
+
+header{background:black;color:white;padding:30px;font-size:24px;}
+
+nav{background:#111;padding:18px;}
+nav a{color:white;margin:25px;text-decoration:none;font-weight:bold;}
+nav a:hover{color:#4CAF50;}
+
+.product{
+background:white;
+max-width:800px;
+margin:70px auto;
+padding:40px;
+border-radius:12px;
+box-shadow:0 0 25px rgba(0,0,0,0.1);
+}
+
+img{width:300px;}
+
+select{
+padding:10px;
+margin-top:15px;
+}
+
+button{
+margin-top:25px;
+padding:15px 35px;
+font-size:16px;
+background:linear-gradient(45deg,#4CAF50,#2E7D32);
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{transform:scale(1.05);}
+</style>
+</head>
+
+<body>
+
+<header>Narvano Clothing</header>
+
+<nav>
+<a href="Home.html">Home</a>
+<a href="ingredients.html">Ingredients</a>
+<a href="clothing.html">Clothing</a>
+<a href="products.html">Products</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="product">
+
+<img src="White shirt with logo right.png">
+
+<h2>Narvano Performance T-Shirt</h2>
+<p>Minimal design. Athletic fit. Eco material.</p>
+
+<h3>€24.99</h3>
+
+<select id="size">
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+</select>
+
+<br>
+
+<button onclick="goToCart()">Add To Cart</button>
+
+</div>
+
+<script>
+function goToCart(){
+let size=document.getElementById("size").value;
+let url="cart.html?product=Narvano%20T-Shirt&price=24.99&size="+size;
+window.open(url,"_blank");
+}
+</script>
+
+</body>
+</html>
